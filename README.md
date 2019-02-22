@@ -19,6 +19,9 @@ system.
 * **NOTE:** This guide *does not* support Windows. It only supports
   **macOS** and **Linux**.
 
+* This guide assumes you already have some fundamental Python and Bash
+  knowledge.
+
 # What is Pipenv?
 
 
@@ -90,21 +93,25 @@ Broad concepts:
   are working on), but you may enter it many times, every time you are working
   on it.
 
-## Creating a new Pipenv
+## Creating a new virtualenv
 
 Every time you want to do a new Python project, you will need to create a new
-virtualenv for it.
+virtualenv for it.  These steps are to create a "pipenv project directory".
+Much like a "git-enabled directory" is signified by a hidden `.git` file
+(revealed with `ls -a`), a "pipenv project directory" will be signified with a
+Pipfile.
 
-1. In a terminal, create a new directory for this activity. You can
-place it anywhere. Change into the directory for the subsequent steps.
-This will be a "pipenv project directory". Much like a "git-enabled directory"
-is signified by a hidden `.git` file (revealed with `ls -a`), a "pipenv project
-directory" will be signified with a Pipfile.
+1. In a terminal, create a new directory for this activity. It could be
+anywhere.  Change into the directory for the subsequent steps.  For example:
 
+```bash
+mkdir pipenv_test
+cd pipenv_test
+```
 
 2. Create a Pipfile along with a new pipenv "virtualenv" as follows:
 
-    pipenv --python 3
+pipenv --python 3
 
 ## Entering a virtualenv
 
