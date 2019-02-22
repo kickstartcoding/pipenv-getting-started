@@ -2,25 +2,26 @@
 
 # Kickstart Pipenv: Getting Started
 
-Tutorial for downloading packages from PyPI, using Pipenv to create and manage
-virtualenvs and do the downloads.
+Tutorial for downloading packages from PyPI. Teaches how to install  Pipenv to
+create and manage virtualenvs and download packages.
 
 ## Who is this guide for
 
-This is for **brand new Python users**, including **coding class students**
-who want a simple and to-the-point guide on getting Pipenv working on their
-system.
+* This is for **brand new Python users**, including **coding class students**
+  who want a simple and to-the-point guide on getting Pipenv working on their
+  system.
+
+* This guide assumes you already have some fundamental Python and Bash
+  knowledge.
+
+* This guide *does not* support Windows. It assumes you use either **macOS** or
+  **Ubuntu GNU/Linux**.
 
 > This was original created for Kickstart Coding, the affordable,
 > inclusive, and intensive coding course teaching cutting-edge Python /
 > Django and JavaScript / React web development in Oakland, CA.
 > [Learn more and enroll here.](http://kickstartcoding.com/?utm_source=github&utm_campaign=cheatsheets)
 
-* **NOTE:** This guide *does not* support Windows. It only supports
-  **macOS** and **Linux**.
-
-* This guide assumes you already have some fundamental Python and Bash
-  knowledge.
 
 # What is Pipenv?
 
@@ -33,12 +34,17 @@ might have different needs from PyPI.
 
 ### Key Terms
 
+
+* **package** - A (usually) free/open source library of programming code, that
+  others have published to the internet for you to download and use.
+
 * **PyPI** - A giant repository of free, open source libraries that various
   people around the world have written, for use in your code.
 
 * **Pipenv** - A command-line tool for downloading software (like `git`, or
   `brew`, or `apt`). One of several tools available for downloading and using
-  modules from PyPI.
+  packages from PyPI. This guide uses it since it requires the fewest steps for
+  beginners.
 
 * **virtualenv** - The place on your computer where third party libraries go
   when downloaded from PyPI. Pipenv automatically creates one of these for each
@@ -46,11 +52,11 @@ might have different needs from PyPI.
   independently of each other, no matter what each one might need downloaded to
   work.
 
+### (Less) Key Terms
+
 * **Pipfile** - Pipenv keeps track of what you have downloaded using it in a
   file called *Pipfile*. This is in case you forget, or in case a team-member
   needs to download the same packages as you.
-
-### (Less) Key Terms
 
 * **pip** (or **pip3**) -- Another (older) tool used to download packages from
   PyPI. Pipenv (essentially) uses this "behind the scenes".
@@ -111,7 +117,9 @@ cd pipenv_test
 
 2. Create a Pipfile along with a new pipenv "virtualenv" as follows:
 
+```bash
 pipenv --python 3
+```
 
 ## Entering a virtualenv
 
